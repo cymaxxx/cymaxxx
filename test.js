@@ -47,7 +47,7 @@ let sum = 0, num;
     console.log(index);
     console.log(item);
     console.log(arr);
-  } */
+  } 
 
   const numbers = [1, 2, 3, 4, 5];
 
@@ -58,3 +58,40 @@ let sum = 0, num;
     console.log(i);
     console.log(ar);
   }
+  const numbers = [1, 2, 3, 4, 5];
+
+  numbers.forEach((thingy, i, ar) => {
+    console.log(thingy);
+    console.log(i);
+    console.log(ar);
+  });*/
+
+  const numbers = [1, 2, 3, 4, 5];
+
+  let sum = 0;
+
+  numbers.forEach(thingy => {
+    
+    sum += thingy;
+    
+    console.log(sum); //returns all sums not just one
+    
+  });
+
+  // DIFFERENT USE CASE FOR THE FUNCTION ABOVE
+
+  const letters = ["a", "c", "d", "z", "z", "a", "a", "d", "b", "c", "c", "d"];
+
+  let count = {};
+
+  letters.forEach(thingy => {
+    
+    if (count[thingy]) {
+      count[thingy]++;
+    }else{
+      count[thingy] = 1;
+    }
+    
+    console.log(count); //returns all sums not just one
+    
+  });
