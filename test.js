@@ -14,7 +14,7 @@ function sumNums(num) {
   return sum;
 }
 
-console.log(sumNums(3)); // Outputs 6*/
+console.log(sumNums(3)); // Outputs 6
 
 let sum = 0, num;
 
@@ -22,3 +22,39 @@ let sum = 0, num;
     sum += i;
   }
   return sum;
+
+  const numbers = [1, 2, 3, 4, 5];
+
+  numbers.forEach(numItem);
+
+  function numItem(thingy, i, ar) {
+    console.log(`a[' + i + '] = ` + thingy);
+  }
+
+  const numbers = [1, 2, 3, 4, 5];
+
+  numbers.forEach(consoleItem);
+
+  function consoleItem(item, index, arr) {
+    console.log(`a[' + index + '] = ` + item);
+  } 
+
+  const numbers = [1, 2, 3, 4, 5];
+
+  numbers.forEach(consoleItem);
+
+  function consoleItem(item, index, arr) {
+    console.log(index);
+    console.log(item);
+    console.log(arr);
+  } */
+
+  const numbers = [1, 2, 3, 4, 5];
+
+  numbers.forEach(numItem);
+
+  function numItem(thingy, i, ar) {
+    console.log(thingy);
+    console.log(i);
+    console.log(ar);
+  }
