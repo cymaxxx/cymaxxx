@@ -48,3 +48,28 @@ function colMe() {
 
 
 
+/*====================================================================================================
+const colors = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+const btn = document.getElementById("btn");
+const body = document.querySelector("body");
+const color = document.getElementById("color");
+
+
+btn.addEventListener("click", colMe);
+body.style.backgroundColor = "cyan";
+
+function colMe() {
+        let hex = "#";
+    for (let i = 0; i<6; i++) {
+        hex += colors[getRandomNum()];   
+    }
+    color.textContent = hex; 
+    body.style.backgroundColor = hex;         
+}
+function getRandomNum() {
+    
+    return Math.floor(Math.random() * colors.length);
+
+}
+
+======================================================================================================*/
