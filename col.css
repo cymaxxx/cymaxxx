@@ -1,0 +1,28 @@
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+.color{
+    background-color: black;
+    color: beige;
+}
+
+h2{
+    background-color: black;
+    color: beige;
+    padding: 50px 20px;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+.btn{
+    background-color: rgb(41, 41, 158);
+    color: antiquewhite;
+    padding: 10px;
+    border-radius: 10px;
+}
