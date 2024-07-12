@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+#container {
+    display: flex;
+    width: 80%;
+    height: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#editor, #preview {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#editor {
+    border-right: 1px solid #ccc;
+    resize: none;
+    outline: none;
+}
