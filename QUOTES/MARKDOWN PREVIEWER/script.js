@@ -1,21 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const editor = document.getElementById('editor');
-    const preview = document.getElementById('preview');
+import { useState} from 'react';
+import './style.css';
 
-    const defaultMarkdown = `# Heading 1
-## Heading 2
-Link
-\`inline code\`
+function App() {
+    const [text, setText] = useState('');
+    return <div className="App">
+            <textarea id="editor" onChange={(event) => {setText(event.target.value);}}
+            value = {text} >
+            </textarea>
+            <div id="preview">{text}</div>
+         </div>
+}
 
-- List item
-> Blockquote
-!Image
-**Bold text**`;
-
-    editor.value = defaultMarkdown;
-    preview.innerHTML = marked.parse(defaultMarkdown);
-
-    editor.addEventListener('input', () => {
-        preview.innerHTML = marked.parse(editor.value);
-    });
-});
+export default App;
