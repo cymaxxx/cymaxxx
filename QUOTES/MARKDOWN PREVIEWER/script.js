@@ -6,9 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 ## Heading 2
 Link
 \`inline code\`
-\`\`\`
-code block
-\`\`\`
+
 - List item
 > Blockquote
 !Image
