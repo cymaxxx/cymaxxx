@@ -1,14 +1,35 @@
-import { useState} from 'react';
-import './style.css';
 
-function App() {
-    const [text, setText] = useState('');
-    return <div className="App">
-            <textarea id="editor" onChange={(event) => {setText(event.target.value);}}
-            value = {text} >
-            </textarea>
-            <div id="preview">{text}</div>
-         </div>
-}
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+document.addEventListener("DOMContentLoaded", () => {
+  const editor = document.getElementById("editor");
+  const preview = document.getElementById("preview");
 
-export default App;
+  function updatePreview() {
+      const markdown = editor.value;
+      const html = marked(markdown, { breaks: true });
+      preview.innerHTML = html;
+  }
+
+  editor.addEventListener("input", updatePreview);
+
+  // Initial load
+  const defaultMarkdown = `
+# Heading 1
+## Heading 2
+[Link](https://www.example.com)
+\`inline code\`
+\`\`\`
+// Code block
+const greeting = 'Hello';
+console.log(greeting);
+\`\`\`
+- List item 1
+- List item 2
+> Blockquote
+![Image](https://via.placeholder.com/150)
+**Bold text**
+    `;
+  editor.value = defaultMarkdown;
+  updatePreview();
+});
