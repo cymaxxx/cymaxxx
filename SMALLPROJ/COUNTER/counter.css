@@ -1,0 +1,26 @@
+
+body {
+    font-family: monospace;
+    justify-content: center;
+    text-align: center;
+    background-color: lightblue;
+    margin: 100px;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: 300;
+    color: white;
+}
+
+div {
+    font-family: verdana;
+    font-size: 40px;
+}
+
+button {
+    font-family: verdana;
+    font-size: 40px;
+    padding: 50px;
+}
