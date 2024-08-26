@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>OBJECT METHODS</h1>
+    <h3>DEMONSTRATING OBJECT METHODS</h3>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        const person = {
+            car: "Audi",
+            house: "bachelor",
+            savings: "yes",
+            insurance: "yes",
+            address: {
+                home: "Ekangala",
+                work: "Tshwane"
+            },
+            education: {
+                schooling: "Ekangala",
+                tertiary: {
+                    first: "Tshwane",
+                    second: "Johannesburg",
+                }
+            }
+        };
+
+        // Initialize txt and text variables
+        let txt = "";
+        let text = Object.entries(person);
+
+        function displayObjectValues(obj) {
+            for (let [key, value] of text) {
+                if (typeof obj[key] === "object") {
+                    txt += `${key}: `;
+                    displayObjectValues(obj[key]);
+                } else {
+                    txt += `${key}: ${obj[key]} . `;
+                }
+            }
+        }
+
+        // Call the function
+        displayObjectValues(person);
+
+        // Display the results
+        document.getElementById("demo").innerHTML = txt;
+        document.getElementById("demo2").innerHTML = JSON.stringify(person, null, 2);
+    </script>
+</body>
+</html>

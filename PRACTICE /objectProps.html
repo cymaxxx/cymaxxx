@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>OBJECTS</h1>
+    <p>WORKING WITH OBJECTS</p>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        const person = {
+            car: "Audi",
+            house: "bachelor",
+            savings: "yes",
+            insurance: "yes",
+            address: {
+                home: "Ekangala",
+                work: "Tshwane"
+            },
+            education: {
+                schooling: "Ekangala",
+                tertiary: {
+                    first: "Tshwane",
+                    second: "Johannesburg",
+                }
+            }
+        }
+        let txt = "";
+        const myArray = Object.values(person);
+        let myString = JSON.stringify(person);
+        for (let x in person) {
+            if (typeof person[x] === "object") {
+        // Handle nested objects
+                for (let [y] in person[x]) {
+                    txt += person[x][y] + " . ";
+                }
+                
+         } else {
+        txt += person[x] + " . ";
+        }
+       
+        }
+        document.getElementById("demo").innerHTML = txt;
+        document.getElementById("demo2").innerHTML = myArray; 
+        document.getElementById("demo3").innerHTML = myString;  
+    </script>
+</body>
+</html>
