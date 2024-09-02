@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Algorithm</title>
+</head>
+<body>
+    <h1>FIBONACCI NUMBERS</h1>
+    <p class="demo">START</p>
+    <p class="demo2">START</p>
+    <p class="demo3">START</p>
+    <p class="demo4">START</p>
+    <p class="demo5">START</p>
+    <p class="demo6">START</p>
+    <script>
+        let start = 0;
+        let current = 1;
+        let fib;
+        for (let i = 0; i <= 18; i++) {
+            console.log(start); // Print the Fibonacci number
+            fib = start + current;
+            start = current;
+            current = fib;
+        }
+        document.querySelector(".demo").innerHTML = fib;
+        document.querySelector(".demo2").innerHTML = start;
+        document.querySelector(".demo3").innerHTML = current;
+        document.querySelector(".demo4").innerHTML = start[0];
+        document.querySelector(".demo5").innerHTML = current[8];
+        document.querySelector(".demo5").innerHTML = fib[i + 1];
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Algorithm</title>
+</head>
+<body>
+    <h1>FIBONACCI NUMBERS</h1>
+    <p class="demo">START</p>
+    <script>
+        start = 0;
+        current = 1;
+        for (let i = 0; i <= 18; i++) {
+            console.log(i); // Print the Fibonacci number
+            let fib = start + current;
+            start = current;
+            current = fib;
+            
+        }
+        document.getElementById(".demo").innerHTML = fib;
+    </script>
+</body>
+</html>
