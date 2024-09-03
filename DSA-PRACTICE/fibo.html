@@ -8,28 +8,33 @@
 <body>
     <h1>FIBONACCI NUMBERS</h1>
     <p class="demo" id="demo">START</p>
+    <p class="demo2" id="demo2">START</p>
     <script>
         let start = 0;
         let current = 1;
         let fib;
+        let result = '';
+
         for (let i = 0; i <= 18; i++) {
-            console.log(start); // Print the Fibonacci number
+            result += start + ' '; // Append the Fibonacci number to the result string
             fib = start + current;
             start = current;
             current = fib;
-            
         }
+
+        document.getElementById("demo").innerHTML = result; // Display all Fibonacci numbers
 
         const fibo = n => {
             if (n <= 1) {
                 return n;
             } else {
-                return fibo(n - 1) + fibo(n - 2)
+                return fibo(n - 1) + fibo(n - 2);
             }
         }
+        
+        console.log(fibo(19)); // Compute and log the 19th Fibonacci number
+        document.getElementById("demo2").innerHTML = fibo(19);
 
-        document.getElementById("demo").innerHTML = fib;
-        console.log(fibo(19));
     </script>
 </body>
 </html>

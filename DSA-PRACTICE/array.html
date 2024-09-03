@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DSA ARRAYS</h1>
+    <p>LOWEST VALUE</p>
+    <p id="demo">FIBO</p>
+    <script>
+        const array = [18, 7, 88, 14, 3, 5, 21, 71, 2, 9];
+        let minVal = array[0];
+        for (let i of array) {
+            if (i < minVal) {
+                minVal = i;
+            }
+          
+        }
+        document.getElementById("demo").innerHTML = minVal;
+    </script>
+</body>
+</html>
