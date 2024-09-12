@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY INSERTION SORT</title>
+</head>
+<body>
+    <h1>INSERTION SORT</h1>
+    <p id="demo">SHOWING INSERTION SORT</p>
+    <script>
+        let array = [64, 34, 25, 12, 22, 11, 90, 5];
+        let n = array.length;
+
+        for (let i = 1; i < n; i++) {
+            let current = array[i];
+                let j = i - 1;
+    
+                while (j >= 0 && array[j] > current) {
+                array[j + 1] = array[j];
+                j--;
+            }
+    
+        array[j + 1] = current;
+        }
+
+        console.log("Sorted array is:", array);
+        document.getElementById("demo").innerHTML = array;
+    </script>
+</body>
+</html>

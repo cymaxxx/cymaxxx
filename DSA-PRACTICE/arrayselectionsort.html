@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY SELECTION SORT</title>
+</head>
+<body>
+    <h1>ARRAY SELECTION SORT</h1>
+    <p>LOOKING AT ARRAY SELECTION SORT</p>
+    <p id="demo">ARRAY SELECTION SORT</p>
+    <script>
+        const array = [64, 34, 25, 5, 22, 11, 90, 12];
+        let n = array.length;
+
+        for (let i = 0; i < n - 1; i++) {
+        let minIndex = i;
+        for (let j = i + 1; j < n; j++) {
+            if (array[j] < array[minIndex]) {
+                 minIndex = j;
+                }
+            }
+            if (minIndex !== i) {
+            // Swap elements
+            let temp = array[i];
+            array[i] = array[minIndex];
+            array[minIndex] = temp;
+            }
+        }
+
+        console.log("Sorted array:", array);
+        document.getElementById("demo").innerHTML = array;
+    </script>
+</body>
+</html>
