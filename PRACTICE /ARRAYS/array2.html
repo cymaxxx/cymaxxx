@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY METHODS</title>
+</head>
+<body>
+    <h1>DEMONSTRATING ARRAY METHODS</h1>
+    <p>Array Methods</p>
+    <p id="demo">DEMO</p>
+    <div id="show"></div>
+    <div id="show2"></div>
+    <div id="show3"></div>
+    <script>
+        const array = ["Banana", "Orange", "Apple", "Mango"];
+        let position = array.indexOf("Mango");
+        let position2 = array.indexOf("Mango") + 1;
+        let position3 = array.lastIndexOf("Orange");
+        let incl = array.includes("Orange");
+        document.getElementById("demo").innerHTML = position; //3
+        document.getElementById("show").textContent = position2; //4
+        document.getElementById("show2").textContent = position3; //1
+        document.getElementById("show3").textContent = incl; //4
+
+    </script>
+</body>
+</html>

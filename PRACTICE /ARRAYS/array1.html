@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY METHODS</title>
+</head>
+<body>
+    <h1>DEMONSTRATING ARRAY METHODS</h1>
+    <p>Array Methods</p>
+    <p id="demo">DEMO</p>
+    <div id="show"></div>
+    <script>
+        const array = ["Banana", "Orange", "Apple", "Mango"];
+        array.push("Pear");
+        let ar = array.length;
+        let arrayContents = "";
+        for (let index = 0; index < array.length; index++) {
+            arrayContents += array[index] + " " ;
+        }
+        document.getElementById("demo").innerHTML = ar;
+        document.getElementById("show").textContent = arrayContents;
+    </script>
+</body>
+</html>

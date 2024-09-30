@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRING METHODS</title>
+</head>
+<body>
+    <h1>STRING METHODS</h1>
+    <p id="demo">STRING METHODS</p>
+    <p id="demo2">STRING METHODS</p>
+    <p id="demo3">STRING METHODS</p>
+    <p id="demo4">STRING METHODS</p>
+    <script>
+        let text = "Misogynist";
+        let texter = text.split("").join(".");
+        let txt = text.split("").reverse().join(",");
+        let texting = txt.replaceAll(",", "-")
+        document.getElementById("demo").innerHTML = text;
+        document.getElementById("demo2").innerHTML = texter;
+        document.getElementById("demo3").innerHTML = txt;
+        document.getElementById("demo4").innerHTML = texting;
+    </script>
+</body>
+</html>
+<!--For the first getElementById("demo"), you're simply displaying the original 
+string "Misogynist". This works as expected.
+
+For getElementById("demo2"), you're using split(".") on a string that doesn't contain any periods. 
+Then you're joining the resulting array with commas. Since there are no periods to split on, 
+this operation effectively does nothing, and texter will be the same as the original text ("Misogynist").
+
+For getElementById("demo3"), you're using split(",") on a string that doesn't contain any commas.
+ Then you're reversing the resulting array. Since there are no commas to split on, this creates 
+ an array with a single element, 
+and reversing it does nothing. So txt will also be the same as the original text ("Misogynist").-->
